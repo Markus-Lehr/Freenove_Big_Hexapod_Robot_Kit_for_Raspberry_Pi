@@ -1,12 +1,14 @@
 import time
 
-from hardware.body import RobotBody
+from Code.Autonomous.hardware import helper
+from Code.Autonomous.hardware.body import RobotBody
 
 
 class Agent:
     robot: RobotBody
 
     def __init__(self):
+        helper.setup()
         self.robot = RobotBody()
 
     def point(self, angle):

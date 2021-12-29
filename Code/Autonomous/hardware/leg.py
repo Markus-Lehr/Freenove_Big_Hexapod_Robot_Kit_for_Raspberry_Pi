@@ -1,4 +1,4 @@
-from servo import Servo
+from Code.Autonomous.hardware.servo import Servo
 
 
 class Leg:

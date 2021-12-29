@@ -1,4 +1,4 @@
-import leg
+from Code.Autonomous.hardware import leg
 
 
 class RobotBody:
