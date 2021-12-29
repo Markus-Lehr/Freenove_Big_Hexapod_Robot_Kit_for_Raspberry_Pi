@@ -8,6 +8,7 @@ class Leg:
         self.servos = [Servo(channel) for channel in servo_channels]
 
     def set_angles(self, angles: [float]):
+        print(f'setting angles to: {angles}')
         if len(self.servos) != len(angles):
             print('the list of provided angles must be the same length as the list of servos')
             return
