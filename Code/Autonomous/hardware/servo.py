@@ -1,4 +1,4 @@
-from ...Server.PCA9685 import PCA9685
+from .PCA9685 import PCA9685
 
 
 def map_range(value: float, range_a: (float, float), range_b: (float, float)):
