@@ -1,4 +1,4 @@
-from leg import *
+from .leg import *
 
 
 class RobotBody:

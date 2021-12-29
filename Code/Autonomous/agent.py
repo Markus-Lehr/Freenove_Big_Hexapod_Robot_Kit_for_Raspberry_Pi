@@ -1,8 +1,7 @@
 import time
 
-from hardware import *
-from hardware import helper
-from hardware.body import RobotBody
+from .hardware import helper
+from .hardware.body import RobotBody
 
 
 class Agent:
