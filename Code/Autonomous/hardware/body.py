@@ -1,15 +1,15 @@
-import leg
+from leg import *
 
 
 class RobotBody:
-    legs: [leg.Leg]
+    legs: [Leg]
 
     def __init__(self):
         self.legs = [
-            leg.LEG1,
-            leg.LEG2,
-            leg.LEG3,
-            leg.LEG4,
-            leg.LEG5,
-            leg.LEG6
+            LEG1,
+            LEG2,
+            LEG3,
+            LEG4,
+            LEG5,
+            LEG6
         ]
