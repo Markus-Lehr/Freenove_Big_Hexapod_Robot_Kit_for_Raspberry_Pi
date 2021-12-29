@@ -1,3 +1,5 @@
+import time
+
 from .PCA9685 import PCA9685
 
 
@@ -14,6 +16,10 @@ class ServoDriver:
         self.address = address
         self.channel = channel
         self._pwm = PCA9685(address, debug=True)
+
+        # Set the cycle frequency of PWM
+        self._pwm.setPWMFreq(50)
+        time.sleep(0.01)
 
     def set_pwm(self, off_timing, on_timing=0):
         self._pwm.setPWM(self.channel, int(on_timing), int(off_timing))
@@ -40,6 +46,8 @@ class Servo:
         self.angle = angle
         pulse_length = map_range(angle, (0, 180), (500, 2500))  # angle to µs
         duty_cycle = map_range(pulse_length, (0, 20000), (0, 4095))  # µs to duty
+        duty_cycle = int(duty_cycle)
+        print(f'servo {self.driver.channel} wants angle {angle} by sending a duty cycle of {duty_cycle}')
         self.driver.set_pwm(duty_cycle)
 
     def relax(self):
