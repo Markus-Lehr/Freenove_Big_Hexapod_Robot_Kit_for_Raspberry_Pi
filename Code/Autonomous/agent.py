@@ -1,7 +1,7 @@
 import time
 
-from Code.Autonomous.hardware import helper
-from Code.Autonomous.hardware.body import RobotBody
+from hardware import helper
+from hardware.body import RobotBody
 
 
 class Agent:
