@@ -16,6 +16,10 @@ class Leg:
             if angle is not None:
                 self.servos[index].set_angle(angle)
 
+    def relax(self):
+        for servo in self.servos:
+            servo.relax()
+
 
 LEG1 = Leg([15, 14, 13])
 LEG2 = Leg([12, 11, 10])

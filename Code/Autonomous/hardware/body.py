@@ -13,3 +13,7 @@ class RobotBody:
             LEG5,
             LEG6
         ]
+
+    def relax(self):
+        for leg in self.legs:
+            leg.relax()

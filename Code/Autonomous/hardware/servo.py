@@ -41,3 +41,6 @@ class Servo:
         pulse_length = map_range(angle, (0, 180), (500, 2500))  # angle to µs
         duty_cycle = map_range(pulse_length, (0, 20000), (0, 4095))  # µs to duty
         self.driver.set_pwm(duty_cycle)
+
+    def relax(self):
+        self.driver.relax()
