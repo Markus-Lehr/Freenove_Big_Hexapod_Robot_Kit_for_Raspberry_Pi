@@ -22,10 +22,10 @@ class Agent:
 if __name__ == '__main__':
     agent = Agent()
     agent.relax()
-    angle = 0
-    while angle <= 180:
+    angle = 50
+    while angle <= 120:
         print(f'setting leg to angle {angle}')
         agent.point(angle)
         angle += 10
-        time.sleep(5)
+        time.sleep(3)
     agent.relax()
