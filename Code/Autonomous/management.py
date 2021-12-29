@@ -10,6 +10,8 @@ agent = Agent()
 def move_motor():
     leg = int(request.args.get('leg'))
     angle = float(request.args.get('angle'))
+    agent.point(angle, leg_index=leg)
+    return 'Thank you!'
 
 
 if __name__ == "__main__":
