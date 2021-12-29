@@ -3,7 +3,6 @@ import time
 from hardware import helper
 from hardware.body import RobotBody
 
-
 class Agent:
     robot: RobotBody
 
@@ -11,8 +10,8 @@ class Agent:
         helper.setup()
         self.robot = RobotBody()
 
-    def point(self, angle):
-        leg = self.robot.legs[0]
+    def point(self, angle, leg_index=0):
+        leg = self.robot.legs[leg_index]
         leg.set_angles([angle, None, None])
 
     def relax(self):
