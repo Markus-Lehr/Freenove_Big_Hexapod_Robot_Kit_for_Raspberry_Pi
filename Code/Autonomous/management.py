@@ -9,8 +9,10 @@ agent = Agent()
 @app.route('/move-motor', methods=['GET'])
 def move_motor():
     leg = int(request.args.get('leg'))
-    angle = float(request.args.get('angle'))
-    agent.point(angle, leg_index=leg)
+    angle1 = float(request.args.get('angle1'))
+    angle2 = float(request.args.get('angle2'))
+    angle3 = float(request.args.get('angle3'))
+    agent.set_angles(leg, [angle1, angle2, angle3])
     return 'Thank you!'
 
 

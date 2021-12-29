@@ -10,9 +10,12 @@ class Agent:
         helper.setup()
         self.robot = RobotBody()
 
-    def point(self, angle, leg_index=0):
+    def set_angles(self, leg_index, angles: [int]):
         leg = self.robot.legs[leg_index]
-        leg.set_angles([angle, None, None])
+        leg.set_angles(angles)
+
+    def point(self, angle, leg_index=0):
+        self.set_angles(leg_index, [angle, None, None])
 
     def relax(self):
         self.robot.relax()
